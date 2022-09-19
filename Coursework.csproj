@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28FD3A7E-4C5A-454D-B493-EAFA198FFB36}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Coursework</RootNamespace>
+    <AssemblyName>Coursework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7CA29CD253C2F0FF16A50B772B88E990634C6B0E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Coursework_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CircularProgressBar.2.3.0\lib\net35-client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.8.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>packages\GMap.NET.Windows.1.8.0\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.8.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>packages\GMap.NET.Windows.1.8.0\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=1.7.6.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>packages\GMap.NET.Windows.1.8.0\lib\net40\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.115.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.Linq.1.0.115.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WinFormAnimation, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.3.0.0\lib\net35-Client\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.8\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.8\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MonthlySalesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlySalesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacyDataSet1.cs">
+      <DependentUpon>PharmacyDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacyDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PharmacyDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Views\admin_frms\Admin_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\Admin_Dashboard.Designer.cs">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin_frms\admin_prdcts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\admin_prdcts.Designer.cs">
+      <DependentUpon>admin_prdcts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin_frms\admin_frmdashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\admin_frmdashboard.Designer.cs">
+      <DependentUpon>admin_frmdashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin_frms\admin_frmorders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\admin_frmorders.Designer.cs">
+      <DependentUpon>admin_frmorders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin_frms\admin_frmempSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\admin_frmempSettings.Designer.cs">
+      <DependentUpon>admin_frmempSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin_frms\adm_addemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\adm_addemp.Designer.cs">
+      <DependentUpon>adm_addemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin_frms\adm_chngpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\adm_chngpass.Designer.cs">
+      <DependentUpon>adm_chngpass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin_frms\adm_stnpersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\adm_stnpersonal.Designer.cs">
+      <DependentUpon>adm_stnpersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin_frms\MonthlySalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\MonthlySalesReport.Designer.cs">
+      <DependentUpon>MonthlySalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin_frms\QrCode_scanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\admin_frms\QrCode_scanner.Designer.cs">
+      <DependentUpon>QrCode_scanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_splashscreen.Designer.cs">
+      <DependentUpon>frm_splashscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox\CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox\CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Database.cs" />
+    <Compile Include="PharmacyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PharmacyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user_frms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user_frms\frmOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\frmOrders.Designer.cs">
+      <DependentUpon>frmOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user_frms\frmContactUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\frmContactUs.Designer.cs">
+      <DependentUpon>frmContactUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user_frms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\user_frms\frm_register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\frm_register.Designer.cs">
+      <DependentUpon>frm_register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user_frms\frm_cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\frm_cart.Designer.cs">
+      <DependentUpon>frm_cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user_frms\frm_prdctpop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\frm_prdctpop.Designer.cs">
+      <DependentUpon>frm_prdctpop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user_frms\frm_products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\frm_products.Designer.cs">
+      <DependentUpon>frm_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user_frms\stn_chngepwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\stn_chngepwd.Designer.cs">
+      <DependentUpon>stn_chngepwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\user_frms\stn_personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\user_frms\stn_personal.Designer.cs">
+      <DependentUpon>stn_personal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MonthlySalesReport.rdlc" />
+    <EmbeddedResource Include="Views\admin_frms\Admin_Dashboard.resx">
+      <DependentUpon>Admin_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\admin_frms\admin_frmempSettings.resx">
+      <DependentUpon>admin_frmempSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\admin_frms\admin_prdcts.resx">
+      <DependentUpon>admin_prdcts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\admin_frms\admin_frmdashboard.resx">
+      <DependentUpon>admin_frmdashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\admin_frms\admin_frmorders.resx">
+      <DependentUpon>admin_frmorders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\admin_frms\adm_addemp.resx">
+      <DependentUpon>adm_addemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\admin_frms\adm_chngpass.resx">
+      <DependentUpon>adm_chngpass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\admin_frms\adm_stnpersonal.resx">
+      <DependentUpon>adm_stnpersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\admin_frms\MonthlySalesReport.resx">
+      <DependentUpon>MonthlySalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\admin_frms\QrCode_scanner.resx">
+      <DependentUpon>QrCode_scanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_splashscreen.resx">
+      <DependentUpon>frm_splashscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox\CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user_frms\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user_frms\frmOrders.resx">
+      <DependentUpon>frmOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user_frms\frmContactUs.resx">
+      <DependentUpon>frmContactUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user_frms\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\user_frms\frm_register.resx">
+      <DependentUpon>frm_register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user_frms\frm_cart.resx">
+      <DependentUpon>frm_cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user_frms\frm_prdctpop.resx">
+      <DependentUpon>frm_prdctpop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user_frms\frm_products.resx">
+      <DependentUpon>frm_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user_frms\stn_chngepwd.resx">
+      <DependentUpon>stn_chngepwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\user_frms\stn_personal.resx">
+      <DependentUpon>stn_personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Coursework_TemporaryKey.pfx" />
+    <None Include="MonthlySalesDataSet.xsc">
+      <DependentUpon>MonthlySalesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MonthlySalesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MonthlySalesDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MonthlySalesDataSet.xss">
+      <DependentUpon>MonthlySalesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PharmacyDataSet.xsc">
+      <DependentUpon>PharmacyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PharmacyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PharmacyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PharmacyDataSet.xss">
+      <DependentUpon>PharmacyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PharmacyDataSet1.xsc">
+      <DependentUpon>PharmacyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PharmacyDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PharmacyDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PharmacyDataSet1.xss">
+      <DependentUpon>PharmacyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lrg-Conact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downloads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-diagram1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lrg-diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lrg-calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lrg-settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cmpny_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alpha logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alpha logo dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alpha logo dashboard 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_nethmi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alpha logo dashboard 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alpha logo dashboard 31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alpha logo dashboard 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alpha logo dashboard 41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash Screen  By CodeCraaks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mdicine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Order1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+    <None Include="Resources\show1.png" />
+    <None Include="Resources\show2.png" />
+    <None Include="Resources\show3.png" />
+    <None Include="Resources\not show.png" />
+    <None Include="Resources\not-show.png" />
+    <None Include="Resources\not-show1.png" />
+    <None Include="Resources\show %282%29.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
